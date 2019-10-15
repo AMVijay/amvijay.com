@@ -14,7 +14,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
-  <title>AM.Vijay</title>
+  <title>AM.Vijay - How HTTPS works?</title>
 </head>
 
 <body style="min-height: 75rem; padding-top: 4.5rem;">
@@ -44,52 +44,42 @@
     </nav>
   </div>
   <div id="content" class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">How HTTPS works?</h5>
-            <p class="card-text">This post describes how https works between browser and server</p>
-            <a href="/how-https-works.html" class="btn btn-primary">Read More...</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Micro Service implementation using Spring netflix, Zuul</h5>
-            <p class="card-text">This post contains how micro service can be implemented using Spring Netflix Discovery,
-              Zuul framework</p>
-            <a href="#" class="btn btn-primary">Read More...</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Micro Service implementation using Spring netflix, Zuul</h5>
-            <p class="card-text">This post contains how micro service can be implemented using Spring Netflix Discovery,
-              Zuul framework</p>
-            <a href="#" class="btn btn-primary">Read More...</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Micro Service implementation using Spring netflix, Zuul</h5>
-            <p class="card-text">This post contains how micro service can be implemented using Spring Netflix Discovery,
-              Zuul framework</p>
-            <a href="#" class="btn btn-primary">Read More...</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h1 id="20191014-how-https-works-">How HTTPS Works?</h1>
+    <p>HTTPS is secured http protocol to transmit data between client and server. It uses SSL (secured socket layer) /
+      TLS (transport layer security) . HTTPS uses asymmetric keys for encryption and decryption. SSL certificate which
+      includes asymmetric key (private key, public key) is required for https to work. </p>
+    <p>SSL certificate has two part of it, those are:</p>
+    <ul>
+      <li><strong>Public key</strong>
+        <ul>
+          <li>This is the key exposed to client. Browser client gets this key from server and confirms server identity.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Private key</strong>
+        <ul>
+          <li>This is key used server not exposed to anybody. Server uses this key to decrypt the message received from
+            client during handshake.</li>
+        </ul>
+      </li>
+      <li>
+        <p>Step1: browser client sends hello message http request to server along with ssl/tls versions it can
+          communicate.</p>
+      </li>
+      <li>Step2: server responds back to browser client with hello message , public key and the highest grade ssl/tls
+        version among the one sent by client .</li>
+      <li>Step 3: client validates the ssl certificate for identity and authenticity. Then, browser client generates new
+        symmetric key. It is sent to server as encrypted using public key. </li>
+      <li>Step 4: then, server decrypts the symmetric key using its own private key. Then, it sends back encrypted
+        message to client using the symmetric key. </li>
+      <li>Step 5 : here onwards, browser client sends all the follow up requests using the symmetric key sent to server
+        during handshake.</li>
+    </ul>
+
   </div>
   <div id="footer" class="d-flex justify-content-center">
-    © Vijayaraaghavan AM - 
+    © Vijayaraaghavan AM -
     &nbsp;
     <a href="https://twitter.com/am_vijay" target="_blank">@am_vijay</a>
   </div>
