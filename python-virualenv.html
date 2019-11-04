@@ -4,10 +4,10 @@
 <head>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-2179310069845350",
-            enable_page_level_ads: true
-        });
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-2179310069845350",
+      enable_page_level_ads: true
+    });
   </script>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -21,13 +21,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
-  <title>AM.Vijay</title>
+  <title>AM.Vijay - Setup Python VirualEnvironment in Windows </title>
 </head>
 
 <body style="min-height: 75rem; padding-top: 4.5rem;">
   <div id="header">
     <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #8fc1e3;">
-      <a class="navbar-brand" href="#">AM.VIJAY</a>
+      <a class="navbar-brand" href="/index.html">AM.VIJAY</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/index.html">Home</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="#">Java</a>
@@ -51,26 +51,24 @@
     </nav>
   </div>
   <div id="content" class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">How HTTPS works?</h5>
-            <p class="card-text">This post describes how https works between browser and server</p>
-            <a href="/how-https-works.html" class="btn btn-primary">Read More...</a>
-          </div>
-        </div>
-      </div>
-	  <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Python Virual Environment Setup</h5>
-            <p class="card-text">This post describes how to setup python virual environment in windows</p>
-            <a href="/python-virualenv.html" class="btn btn-primary">Read More...</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h1 id="instructions-to-setup-python-virtual-enviornment-in-windows">Instructions to setup Python Virtual Enviornment in Windows</h1>
+	<ul>
+		<li>Download Latest version of Python from python.org. Here, i refer python-3.8 version.</li>
+		<li>Execute script <a href="https://github.com/AMVijay/tensorflow-learning/blob/master/python-env-setup.cmd">https://github.com/AMVijay/tensorflow-learning/blob/master/python-env-setup.cmd</a> to setup python executable in system path.</li>
+		<li>Check whether the installation using command <ul>
+		<li><code>python --version</code></li>
+		<li><code>pip3 --version</code></li>
+		<li><code>virtualenv --version</code></li>
+		</ul>
+		</li>
+		<li>Mostly virtualenv installation won&#39;t be available in default python installation. So install virutal env using command <code>pip3 install -U pip virtualenv</code></li>
+		<li>PIP can be upgraded to latest version using command <code>python -m pip install -U pip</code></li>
+		<li>Navigate to the python installed directory, and create folder venv for virtual environments.</li>
+		<li>Create Virtual environment using command <code>virtualenv --system-site-packages -p python ./venv</code>
+		<img src="https://amvijay.github.io/images/20191103-python-virualenv-creation.JPG" alt=""></li>
+		<li>Activate the virual environment by navigating to <code>.\venv\Scripts\activate</code>. </li>
+	</ul>
+
   </div>
   <div id="footer" class="d-flex justify-content-center">
     © Vijayaraaghavan AM -
