@@ -26,6 +26,7 @@
 
 <body style="min-height: 75rem; padding-top: 4.5rem;">
   <div id="header">
+  
     <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #8fc1e3;">
       <a class="navbar-brand" href="/index.html">AM.VIJAY</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -51,6 +52,152 @@
     </nav>
   </div>
   <div id="content" class="container">
+	<h1 id="steps-to-install-next-cloud-16-in-linux-debian-debian-windows-app-">Steps to install Next Cloud 16 in Linux/Debian/Debian Windows App.</h1>
+	<h2 id="install-debian-linux-app-in-windows-and-configuration">Install Debian Linux App in Windows and Configuration</h2>
+	<ul>
+	<li><p>Install debian app in windows from windows store.</p>
+	<ul>
+	<li>installation will be done in C:\Users\<userdir>\AppData\Local\Packages as folder <code>TheDebianProject.DebianGNULinux_76v4gfsz19hv4</code></li>
+	<li>While launching first time, enter username as <code>admin</code> and password as <code>password</code></li>
+	</ul>
+	</li>
+	<li><p>Run command <code>sudo passwd root</code> to change root user password as <code>password</code>, and remember the password.</p>
+	<ul>
+	<li>If it is first time, password will be set directly without being asked the current password.</li>
+	</ul>
+	</li>
+	<li>Run command <code>sudo apt update</code> or <code>apt-get update</code> to update packages in Debian.</li>
+	<li>Run command <code>sudo apt upgrade -y</code> or <code>apt-get upgrade -y</code> to run patches and latest updates for all packages installed already.</li>
+	</ul>
+	<h2 id="install-apache2-and-configure">Install Apache2 and Configure</h2>
+	<ul>
+	<li>Run command <code>sudo apt install apache2</code> to install apache.<ul>
+	<li>Add these 2 lines in <code>/etc/apache2/apache2.conf</code> using command <code>sudo vi /etc/apache2/apache2.conf</code><pre><code>  Servername localhost
+	  AcceptFilter <span class="hljs-keyword">http</span> <span class="hljs-literal">none</span>
+	</code></pre></li>
+	</ul>
+	</li>
+	<li>You can start apache : <code>/etc/init.d/apache2 start</code> or <pre><code>  sudo service apache2 <span class="hljs-literal">stop</span>
+	  sudo service apache2 <span class="hljs-literal">start</span>
+	</code></pre></li>
+	</ul>
+	<h2 id="install-mysql-and-its-configuration">Install MySQL and its configuration</h2>
+	<ul>
+	<li>Execute command <code>sudo apt install mysql-server</code> or <code>sudo apt install mariadb-server</code></li>
+	<li>Command to start MYSQL Server    <pre><code>  sudo service mysql <span class="hljs-literal">start</span>
+	  sudo service mqsql <span class="hljs-literal">stop</span>
+	</code></pre></li>
+	</ul>
+	<h2 id="install-php7-3">Install PHP7.3</h2>
+	<ul>
+	<li>Add below repository sources to install PHP in Debian Linux Distribution (Would require root permission)<pre><code>sudo apt install apt-transport-https lsb-release ca-certificates
+	sudo wget -O /etc/apt/trusted<span class="hljs-selector-class">.gpg</span><span class="hljs-selector-class">.d</span>/php<span class="hljs-selector-class">.gpg</span> https:<span class="hljs-comment">//packages.sury.org/php/apt.gpg</span>
+	echo <span class="hljs-string">"deb https://packages.sury.org/php/ $(lsb_release -sc) main"</span> &gt; /etc/apt/sources<span class="hljs-selector-class">.list</span><span class="hljs-selector-class">.d</span>/php<span class="hljs-selector-class">.list</span>
+	sudo apt update
+	sudo apt upgrade -y
+	</code></pre></li>
+	<li><p>Run command to install PHP7.3 Latest version
+	  <code>sudo apt install php7.3 libapache2-mod-php7.3 php7.3-common php7.3-gd php7.3-json php7.3-mysql php7.3-curl php7.3-mbstring php7.3-intl php7.3-xml php7.3-zip</code></p>
+	</li>
+	<li><p>To Search available php7.3 modules to install <code>sudo apt search php7.3</code></p>
+	</li>
+	<li>Remove older version of php using <code>sudo apt purge php7.1*</code></li>
+	<li>To check PHP modules <code>php -m</code></li>
+	<li>To check PHP version <code>php -v</code></li>
+	</ul>
+	<ul>
+	<li>Run command <code>sudo apt install php7.3 libapache2-mod-php7.3 php7.3-common php7.3-gd php7.3-json php7.3-mysql php7.3-curl php7.3-mbstring php7.3-intl php7.3-mcrypt php7.3-imagick php7.3-xml php7.3-zip</code></li>
+	<li>Run command <code>sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql</code></li>
+	</ul>
+	<h2 id="install-nextcloud">Install NextCloud</h2>
+	<ul>
+	<li>Run command <code>wget https://download.nextcloud.com/server/releases/nextcloud-16.0.2.zip --no-check-certificate</code> to download nextcloud.</li>
+	<li>Install unzip using command <code>sudo apt install unzip</code></li>
+	<li>Unzip the nextcloud server zip file using command <code>unzip nextcloud-16.0.2.zip</code> </li>
+	<li>Move NextCloud folder to Apache using command <code>sudo mv nextcloud /var/www/html/nextcloud</code></li>
+	<li><code>sudo mkdir /var/www/html/nextcloud/data</code></li>
+	<li><code>sudo chown -R www-data:www-data /var/www/html/nextcloud/</code></li>
+	<li><code>sudo chmod -R 755 /var/www/html/nextcloud/</code></li>
+	<li>Create a new configuration file called nextcloud.conf <code>sudo nano /etc/apache2/sites-available/nextcloud.conf</code></li>
+	<li><p>Add the below configuration to nextcloud.conf file   </p>
+	<pre><code>      <span class="hljs-section">&lt;VirtualHost *:80&gt;</span>
+
+		  <span class="hljs-attribute"><span class="hljs-nomarkup">DocumentRoot</span></span> /var/www/html/nextcloud/
+
+		  <span class="hljs-attribute">Alias</span> /nextcloud <span class="hljs-string">"/var/www/html/nextcloud/"</span>
+
+		  <span class="hljs-section">&lt;Directory /var/www/html/nextcloud/&gt;</span>
+		  <span class="hljs-attribute"><span class="hljs-nomarkup">Options</span></span> +FollowSymlinks
+		  <span class="hljs-attribute">AllowOverride</span> <span class="hljs-literal">All</span>
+		  <span class="hljs-attribute">Require</span> <span class="hljs-literal">all</span> granted
+		  <span class="hljs-section">&lt;IfModule mod_dav.c&gt;</span>
+		  <span class="hljs-attribute">Dav</span> <span class="hljs-literal">off</span>
+		  <span class="hljs-section">&lt;/IfModule&gt;</span>
+		  <span class="hljs-attribute"><span class="hljs-nomarkup">SetEnv</span></span> HOME /var/www/html/nextcloud
+		  <span class="hljs-attribute"><span class="hljs-nomarkup">SetEnv</span></span> HTTP_HOME /var/www/html/nextcloud
+		  <span class="hljs-section">&lt;/Directory&gt;</span>
+
+		  <span class="hljs-attribute">ErrorLog</span> <span class="hljs-variable">${APACHE_LOG_DIR}</span>/error.log
+		  <span class="hljs-attribute">CustomLog</span> <span class="hljs-variable">${APACHE_LOG_DIR}</span>/access.log combined
+
+		  <span class="hljs-section">&lt;/VirtualHost&gt;</span>
+	</code></pre></li>
+	<li>To save and exit the files first press CTRL+O and then CTRL+X.</li>
+	<li>Enable the newly created site <code>sudo a2ensite nextcloud.conf</code></li>
+	<li>Enable the following modules for proper Nextcloud working…<pre><code>sudo a2enmod <span class="hljs-built_in">rewrite</span>
+	sudo a2enmod headers
+	sudo a2enmod env
+	sudo a2enmod dir
+	sudo a2enmod setenvif
+	sudo a2enmod mime
+	</code></pre></li>
+	<li><p>Add system name to the php config.php <code>/var/www/html/nextcloud/config</code> as below </p>
+	<pre><code>'trusted_domains' =&gt;<span class="hljs-built_in">
+	array </span>(
+	 0 =&gt; 'localhost',
+	 1 =&gt; 'lp0039973',
+	),
+	</code></pre></li>
+	<li><p>To activate the new configuration, you need to run: <code>sudo service apache2 reload</code> or</p>
+	<pre><code>  sudo service apache2 <span class="hljs-literal">stop</span>
+	  sudo service apache2 <span class="hljs-literal">start</span>
+	</code></pre><p>or <code>sudo service apache2 restart</code></p>
+	</li>
+	</ul>
+	<h2 id="mysql-configuration-for-nextcloud">MYSQL configuration for NextCloud</h2>
+	<ul>
+	<li>Login to MySQL <code>sudo mysql</code></li>
+	<li>Create databse, we are giving it a name nextdb you can give whatever you would like… <code>CREATE DATABASE nextdb;</code></li>
+	<li><p>Create Database user along with password and assigned all the right or above created database to it.
+	<code>GRANT ALL ON nextdb.* to &#39;h2smedia&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;next@123&#39;;</code></p>
+	<ul>
+	<li>Note: h2smedia is username and next@123 is the password. You can change them with your choice. Whereas the nextdb is the above created database name.</li>
+	</ul>
+	</li>
+	<li><p>Flush the privleages so that MySQl can recognizwe the chnages and then exit.</p>
+	<pre><code>FLUSH PRIVILEGES;
+	<span class="hljs-keyword">exit</span>
+	</code></pre></li>
+	</ul>
+	<h2 id="first-time-setup-of-nextcloud">First Time Setup of NextCloud</h2>
+	<ul>
+	<li>Access the URL <code>http://localhost/nextcloud</code> to get setup page<ul>
+	<li>Admin User Name as <code>admin</code> and password as <code>password</code></li>
+	</ul>
+	</li>
+	<li>By Default, NextCloud Setup Page would show Data Folder configuration as <code>/var/www/html/nextcloud/data</code>, Let&#39;s retain.</li>
+	<li>Enter Database User as <code>h2smedia</code>, database password as <code>next@123</code>, Database name as <code>nextdb</code></li>
+	<li>Enter Finish Setup.</li>
+	<li>We will get NextCloud site.</li>
+	</ul>
+	<h2 id="abbreviation">Abbreviation</h2>
+	<ul>
+	<li>apt - Advanced Packaging Tool</li>
+	<li>sudo - Super User Do</li>
+	</ul>
+
+  </div>
+  
 	<h1 id="steps-to-install-next-cloud-16-in-linux-debian-debian-windows-app-">Steps to install NextCloud 16 in Linux/Debian/Debian Windows App.</h1>
 	<h2 id="install-debian-linux-app-in-windows-and-configuration">Install Debian Linux App in Windows and Configuration</h2>
 	<ul>
