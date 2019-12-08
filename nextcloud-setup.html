@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-2179310069845350",
+      enable_page_level_ads: true
+    });
+  </script>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    crossorigin="anonymous">
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <title>AM.Vijay - NextCloud Installation and Configuration Steps</title>
+</head>
+
+<body style="min-height: 75rem; padding-top: 4.5rem;">
+  <div id="header">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #8fc1e3;">
+      <a class="navbar-brand" href="/index.html">AM.VIJAY</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Java</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hadoop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">tensorflow</a>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div id="content" class="container">
+	<h1 id="steps-to-install-next-cloud-16-in-linux-debian-debian-windows-app-">Steps to install NextCloud 16 in Linux/Debian/Debian Windows App.</h1>
+	<h2 id="install-debian-linux-app-in-windows-and-configuration">Install Debian Linux App in Windows and Configuration</h2>
+	<ul>
+	<li><p>Install debian app in windows from windows store.</p>
+	<ul>
+	<li>installation will be done in C:\Users\<userdir>\AppData\Local\Packages as folder <code>TheDebianProject.DebianGNULinux_76v4gfsz19hv4</code></li>
+	<li>While launching first time, enter username as <code>admin</code> and password as <code>password</code></li>
+	</ul>
+	</li>
+	<li><p>Run command <code>sudo passwd root</code> to change root user password as <code>password</code>, and remember the password.</p>
+	<ul>
+	<li>If it is first time, password will be set directly without being asked the current password.</li>
+	</ul>
+	</li>
+	<li>Run command <code>sudo apt update</code> or <code>apt-get update</code> to update packages in Debian.</li>
+	<li>Run command <code>sudo apt upgrade -y</code> or <code>apt-get upgrade -y</code> to run patches and latest updates for all packages installed already.</li>
+	</ul>
+	<h2 id="install-apache2-and-configure">Install Apache2 and Configure</h2>
+	<ul>
+	<li>Run command <code>sudo apt install apache2</code> to install apache.<ul>
+	<li>Add these 2 lines in <code>/etc/apache2/apache2.conf</code> using command <code>sudo vi /etc/apache2/apache2.conf</code><pre><code>  Servername localhost
+	  AcceptFilter <span class="hljs-keyword">http</span> <span class="hljs-literal">none</span>
+	</code></pre></li>
+	</ul>
+	</li>
+	<li>You can start apache : <code>/etc/init.d/apache2 start</code> or <pre><code>  sudo service apache2 <span class="hljs-literal">stop</span>
+	  sudo service apache2 <span class="hljs-literal">start</span>
+	</code></pre></li>
+	</ul>
+	<h2 id="install-mysql-and-its-configuration">Install MySQL and its configuration</h2>
+	<ul>
+	<li>Execute command <code>sudo apt install mysql-server</code> or <code>sudo apt install mariadb-server</code></li>
+	<li>Command to start MYSQL Server    <pre><code>  sudo service mysql <span class="hljs-literal">start</span>
+	  sudo service mqsql <span class="hljs-literal">stop</span>
+	</code></pre></li>
+	</ul>
+	<h2 id="install-php7-3">Install PHP7.3</h2>
+	<ul>
+	<li>Add below repository sources to install PHP in Debian Linux Distribution (Would require root permission)<pre><code>sudo apt install apt-transport-https lsb-release ca-certificates
+	sudo wget -O /etc/apt/trusted<span class="hljs-selector-class">.gpg</span><span class="hljs-selector-class">.d</span>/php<span class="hljs-selector-class">.gpg</span> https:<span class="hljs-comment">//packages.sury.org/php/apt.gpg</span>
+	echo <span class="hljs-string">"deb https://packages.sury.org/php/ $(lsb_release -sc) main"</span> &gt; /etc/apt/sources<span class="hljs-selector-class">.list</span><span class="hljs-selector-class">.d</span>/php<span class="hljs-selector-class">.list</span>
+	sudo apt update
+	sudo apt upgrade -y
+	</code></pre></li>
+	<li><p>Run command to install PHP7.3 Latest version
+	  <code>sudo apt install php7.3 libapache2-mod-php7.3 php7.3-common php7.3-gd php7.3-json php7.3-mysql php7.3-curl php7.3-mbstring php7.3-intl php7.3-xml php7.3-zip</code></p>
+	</li>
+	<li><p>To Search available php7.3 modules to install <code>sudo apt search php7.3</code></p>
+	</li>
+	<li>Remove older version of php using <code>sudo apt purge php7.1*</code></li>
+	<li>To check PHP modules <code>php -m</code></li>
+	<li>To check PHP version <code>php -v</code></li>
+	</ul>
+	<ul>
+	<li>Run command <code>sudo apt install php7.3 libapache2-mod-php7.3 php7.3-common php7.3-gd php7.3-json php7.3-mysql php7.3-curl php7.3-mbstring php7.3-intl php7.3-mcrypt php7.3-imagick php7.3-xml php7.3-zip</code></li>
+	<li>Run command <code>sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql</code></li>
+	</ul>
+	<h2 id="install-nextcloud">Install NextCloud</h2>
+	<ul>
+	<li>Run command <code>wget https://download.nextcloud.com/server/releases/nextcloud-16.0.2.zip --no-check-certificate</code> to download nextcloud.</li>
+	<li>Install unzip using command <code>sudo apt install unzip</code></li>
+	<li>Unzip the nextcloud server zip file using command <code>unzip nextcloud-16.0.2.zip</code> </li>
+	<li>Move NextCloud folder to Apache using command <code>sudo mv nextcloud /var/www/html/nextcloud</code></li>
+	<li><code>sudo mkdir /var/www/html/nextcloud/data</code></li>
+	<li><code>sudo chown -R www-data:www-data /var/www/html/nextcloud/</code></li>
+	<li><code>sudo chmod -R 755 /var/www/html/nextcloud/</code></li>
+	<li>Create a new configuration file called nextcloud.conf <code>sudo nano /etc/apache2/sites-available/nextcloud.conf</code></li>
+	<li>Add the below configuration to nextcloud.conf file
+	```<VirtualHost *:80>
+
+	</li>
+	</ul>
+	<p>DocumentRoot /var/www/html/nextcloud/</p>
+	<p>Alias /nextcloud &quot;/var/www/html/nextcloud/&quot;</p>
+	<Directory /var/www/html/nextcloud/>
+	Options +FollowSymlinks
+	AllowOverride All
+	Require all granted
+	<IfModule mod_dav.c>
+	Dav off
+	</IfModule>
+	SetEnv HOME /var/www/html/nextcloud
+	SetEnv HTTP_HOME /var/www/html/nextcloud
+	</Directory>
+
+	<p>ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined</p>
+	<p></VirtualHost></p>
+	<pre><code>* To save and <span class="hljs-keyword">exit</span> the files first press CTRL+O and then CTRL+X.
+	* Enable the newly created site `sudo a2ensite nextcloud.conf`
+	* Enable the following modules <span class="hljs-keyword">for</span> proper Nextcloud working…
+	</code></pre><p>sudo a2enmod rewrite
+	sudo a2enmod headers
+	sudo a2enmod env
+	sudo a2enmod dir
+	sudo a2enmod setenvif
+	sudo a2enmod mime</p>
+	<pre><code>* Add system <span class="hljs-built_in">name</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> php config.php `/var/www/html/nextcloud/config` <span class="hljs-keyword">as</span> <span class="hljs-keyword">below</span>
+	</code></pre><p>&#39;trusted_domains&#39; =&gt;
+	  array (
+	   0 =&gt; &#39;localhost&#39;,
+	   1 =&gt; &#39;lp0039973&#39;,
+	),</p>
+	<pre><code>
+	* <span class="hljs-keyword">To</span> activate the <span class="hljs-literal">new</span> configuration, you need <span class="hljs-keyword">to</span> run: <span class="hljs-string">`sudo service apache2 reload`</span> <span class="hljs-literal">or</span>
+	</code></pre><pre><code>sudo service apache2 <span class="hljs-literal">stop</span>
+	sudo service apache2 <span class="hljs-literal">start</span>
+	</code></pre><pre><code><span class="hljs-keyword">or</span> `sudo service apache2 restart`
+
+	<span class="hljs-comment">## MYSQL configuration for NextCloud</span>
+	* Login <span class="hljs-built_in">to</span> MySQL `sudo mysql`
+	* Create databse, we are giving <span class="hljs-keyword">it</span> <span class="hljs-keyword">a</span> name nextdb you can give whatever you would like… `CREATE DATABASE nextdb;`
+	* Create Database user along <span class="hljs-keyword">with</span> password <span class="hljs-keyword">and</span> assigned all <span class="hljs-keyword">the</span> <span class="hljs-literal">right</span> <span class="hljs-keyword">or</span> above created database <span class="hljs-built_in">to</span> <span class="hljs-keyword">it</span>.
+	`GRANT ALL ON nextdb.* <span class="hljs-built_in">to</span> <span class="hljs-string">'h2smedia'</span>@<span class="hljs-string">'localhost'</span> IDENTIFIED BY <span class="hljs-string">'next@123'</span>;`
+		* Note: h2smedia is username <span class="hljs-keyword">and</span> next@<span class="hljs-number">123</span> is <span class="hljs-keyword">the</span> password. You can change them <span class="hljs-keyword">with</span> your choice. Whereas <span class="hljs-keyword">the</span> nextdb is <span class="hljs-keyword">the</span> above created database name.
+
+	* Flush <span class="hljs-keyword">the</span> privleages so that MySQl can recognizwe <span class="hljs-keyword">the</span> chnages <span class="hljs-keyword">and</span> <span class="hljs-keyword">then</span> exit.
+	</code></pre><p>FLUSH PRIVILEGES;
+	exit
+	```</p>
+	<h2 id="first-time-setup-of-nextcloud">First Time Setup of NextCloud</h2>
+	<ul>
+	<li>Access the URL <code>http://localhost/nextcloud</code> to get setup page<ul>
+	<li>Admin User Name as <code>admin</code> and password as <code>password</code></li>
+	</ul>
+	</li>
+	<li>By Default, NextCloud Setup Page would show Data Folder configuration as <code>/var/www/html/nextcloud/data</code>, Let&#39;s retain.</li>
+	<li>Enter Database User as <code>h2smedia</code>, database password as <code>next@123</code>, Database name as <code>nextdb</code></li>
+	<li>Enter Finish Setup.</li>
+	<li>We will get NextCloud site.</li>
+	</ul>
+	<h2 id="abbreviation">Abbreviation</h2>
+	<ul>
+	<li>apt - Advanced Packaging Tool</li>
+	<li>sudo - Super User Do</li>
+	</ul>
+
+  </div>
+  <div id="footer" class="d-flex justify-content-center">
+    © Vijayaraaghavan AM -
+    &nbsp;
+    <a href="https://twitter.com/am_vijay" target="_blank">@am_vijay</a>
+  </div>
+</body>
+
+</html>
