@@ -1,0 +1,61 @@
+<h1 id="garbage-collection-in-jvm-and-various-types">Garbage Collection in JVM and various types</h1>
+<h2 id="what-is-garbage-collection-in-jvm">What is Garbage Collection in JVM</h2>
+<p>Garbage Collection in a process to identify the unused objects in JVM Heap Space and clean up to gain the memory. in Java Program, N number of objects would have used a method to implement logic. Each Objects would consume memory to hold as much as data in a method call. But once the method call completed, the memory occupied by objects won&#39;t be released immediatly. Those objects are identified in Garbage Collection Process by JVM and that objects memory references are deleted to gain the memory back for next method call execution.</p>
+<p>This Garbage Collection process got matured in JVM in its each release evolution.</p>
+<p>Before heading into various types Garbage Collection available in JVM, quick overview of JVM:</p>
+<h2 id="jvm-architecture">JVM Architecture</h2>
+<p><img src="/jvm-garbage-collection/images/jvm-architecture.jpg" alt=""></p>
+<h3 id="classloader">ClassLoader</h3>
+<ul>
+<li>ClassLoader is responsible to load java language classes into JVM Memory Area - Class and Method Area.</li>
+</ul>
+<h3 id="memory-area">Memory Area</h3>
+<ul>
+<li>Class and Method Area is the place where all Java Classes, Method definitions, static variable, static methods stored.</li>
+<li>Heap Memory Area is the place where all run time objects are stored. In conjunction with Thread Stack and PCRegister Area, JVM Execution Engine uses Heap Memory. Garbage Collection work is identify the unused objects in this heap memory, and clean up.</li>
+<li>Thread Stack Area is the place where Thread execution hierarchy is stored. Based on this details, once method execution completed, JVM execution engine returns back to original caller thread.</li>
+<li>PC Register Area </li>
+<li>Native Method Stack Area is the place where all Native Method call hierarchy stored. Native methods are OS specific method implementation.</li>
+</ul>
+<h3 id="execution-engine">Execution Engine</h3>
+<ul>
+<li>This controls the new thread invocation, accessing objects in memory, and communication with native interface for execution. </li>
+</ul>
+<h3 id="native-interface-and-libraries">Native Interface and Libraries</h3>
+<ul>
+<li>This is platform specific implementation for run time execution call.  </li>
+</ul>
+<h2 id="jvm-heap-memory-overview">JVM Heap Memory Overview</h2>
+<p>Below diagram describes JVM Heap Memory inside what it is ...</p>
+<p><img src="/jvm-garbage-collection/images/jvm-heap-memory-architecture.jpg" alt=""></p>
+<h3 id="new-generation-object-memory">New Generation Object Memory</h3>
+<ul>
+<li>Any new Object created during Execution will be coming to Eden Memory Space of New Generation Memory Area.</li>
+<li>When Minor Garbage Collection completes its run, the object which are all survived in Eden will move it to Survivor 1 Area of New Generation Memory.</li>
+<li>Like this after each Garbage Collection run, Objects which are all survived will move it next survivor area from its previous state.</li>
+<li>Whichever objects survived till survivor 3 area, will move it to Old Generation Memory as the objects are surviving for longer period. </li>
+</ul>
+<h3 id="old-generation-object-memory">Old Generation Object Memory</h3>
+<ul>
+<li>Here, all long survived objects would be present. During Full GC, Old Generation Objects </li>
+</ul>
+<h2 id="types-of-garbage-collection">Types of Garbage Collection</h2>
+<p>Below are the types of Garbage Collection in JVM</p>
+<ul>
+<li>Serial GC</li>
+<li>Parallel GC</li>
+<li>Concurrent Mark Sweep GC</li>
+<li>G1 GC</li>
+</ul>
+<h2 id="serial-gc">Serial GC</h2>
+<p>Serial GC iterates through all the objects in JVM Heap Space New Generation Memory Area one by one and marks which are all the objects unused. Once all the objects are marked, it will erase the content in memory and gain back the memory. When number of objects are less in JVM Heap Space New Generation Memory, then the Serial GC takes less time. Otherwise, Serial GC takes longer time to mark the objects.</p>
+<p><code>java -XX:+UseSerialGC</code></p>
+<h2 id="parallel-gc">Parallel GC</h2>
+<p>Parallel GC segregates the JVM heap memory into multiple logic segments based on parallel thread configuration, and each thread marks the objects which are unused by iterating through the objects its memory segment. Once all the objects are marked, then it cleans the memory for reuse. It is efficient compared to Serial GC.</p>
+<p><code>java -XX:+UseParallelGC -XX:ParallelGCThreads=&lt;x&gt; -XX:+UseParallelOldGC</code></p>
+<h2 id="concurrent-mark-sweep-gc">Concurrent Mark Sweep GC</h2>
+<p>Concurrent Mark Sweep GC is more efficient compared to Parallel GC, and causes less stop the world duation during Full GC Time. Here, minor GC still uses Parallel GC processes on New Generation Memory.</p>
+<p><code>java -XX:+UseConcMarkSweepGC -XX:ParallelCMSThreads=n -XX:UserParNewGC</code></p>
+<h2 id="g1-garbage-first-gc">G1 - Garbage First GC</h2>
+<p>G1 Garbage Collection is more efficient compared to Concurrent Mark Sweep GC. It provides less stop the world duration in Full GC time. G1 process separates the heap space into multiple regions approximately 2000, each region size is between 1 Mb to 32 Mb. Each region will have mix of Eden, survivor, old generation memory.</p>
+<p><code>java -XX:+UseG1GC -XX:MaxGCPauseMillis=&lt;&gt; -XX:InitiatingHeapOccupancyPercent=45</code></p>
