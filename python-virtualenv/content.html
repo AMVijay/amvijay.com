@@ -1,0 +1,17 @@
+<h1 id="instructions-to-setup-python-virtual-enviornment-in-windows">Instructions to setup Python Virtual Enviornment in Windows</h1>
+<ul>
+	<li>Download Latest version of Python from python.org. Here, i refer python-3.8 version.</li>
+	<li>Execute script <a href="https://github.com/AMVijay/tensorflow-learning/blob/master/python-env-setup.cmd">https://github.com/AMVijay/tensorflow-learning/blob/master/python-env-setup.cmd</a> to setup python executable in system path.</li>
+	<li>Check whether the installation using command <ul>
+	<li><code>python --version</code></li>
+	<li><code>pip3 --version</code></li>
+	<li><code>virtualenv --version</code></li>
+	</ul>
+	</li>
+	<li>Mostly virtualenv installation won&#39;t be available in default python installation. So install virutal env using command <code>pip3 install -U pip virtualenv</code></li>
+	<li>PIP can be upgraded to latest version using command <code>python -m pip install -U pip</code></li>
+	<li>Navigate to the python installed directory, and create folder venv for virtual environments.</li>
+	<li>Create Virtual environment using command <code>virtualenv --system-site-packages -p python ./venv</code>
+	<img src="https://amvijay.github.io/images/20191103-python-virualenv-creation.JPG" alt="" width="1000"></li>
+	<li>Activate the virual environment by navigating to <code>.\venv\Scripts\activate</code>. </li>
+</ul>

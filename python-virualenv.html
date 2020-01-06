@@ -33,57 +33,15 @@
 	$(document).ready(function(){
 		$("#header").load("./header.html");
 		$("#footer").load("./footer.html"); 
+		$("#content").load("./python-virualenv/content.html");
 	});
   </script>
   <title>AM.Vijay - Setup Python VirualEnvironment in Windows </title>
 </head>
 
 <body style="min-height: 75rem; padding-top: 4.5rem;">
-  <div id="header">
-    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #8fc1e3;">
-      <a class="navbar-brand" href="/index.html">AM.VIJAY</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="/index.html">Home</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Java</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Hadoop</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">tensorflow</a>
-          </li> -->
-        </ul>
-      </div>
-    </nav>
-  </div>
-  <div id="content" class="container">
-    <h1 id="instructions-to-setup-python-virtual-enviornment-in-windows">Instructions to setup Python Virtual Enviornment in Windows</h1>
-	<ul>
-		<li>Download Latest version of Python from python.org. Here, i refer python-3.8 version.</li>
-		<li>Execute script <a href="https://github.com/AMVijay/tensorflow-learning/blob/master/python-env-setup.cmd">https://github.com/AMVijay/tensorflow-learning/blob/master/python-env-setup.cmd</a> to setup python executable in system path.</li>
-		<li>Check whether the installation using command <ul>
-		<li><code>python --version</code></li>
-		<li><code>pip3 --version</code></li>
-		<li><code>virtualenv --version</code></li>
-		</ul>
-		</li>
-		<li>Mostly virtualenv installation won&#39;t be available in default python installation. So install virutal env using command <code>pip3 install -U pip virtualenv</code></li>
-		<li>PIP can be upgraded to latest version using command <code>python -m pip install -U pip</code></li>
-		<li>Navigate to the python installed directory, and create folder venv for virtual environments.</li>
-		<li>Create Virtual environment using command <code>virtualenv --system-site-packages -p python ./venv</code>
-		<img src="https://amvijay.github.io/images/20191103-python-virualenv-creation.JPG" alt="" width="1000"></li>
-		<li>Activate the virual environment by navigating to <code>.\venv\Scripts\activate</code>. </li>
-	</ul>
-
-  </div>
+  <div id="header"></div>
+  <div id="content" class="container"></div>
   <div id="footer" class="d-flex justify-content-center"></div>
 </body>
 
