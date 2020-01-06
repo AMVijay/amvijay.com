@@ -12,12 +12,6 @@
   gtag('config', 'UA-27752939-2');
 </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-2179310069845350",
-            enable_page_level_ads: true
-        });
-  </script>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,10 +20,22 @@
     crossorigin="anonymous">
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-2179310069845350",
+            enable_page_level_ads: true
+        });
+		
+		$(document).ready(function(){
+			$("#header").load("./header.html");
+			$("#footer").load("./footer.html"); 
+		});
+		
+  </script>
   <title>AM.Vijay</title>
 </head>
 
@@ -101,13 +107,7 @@
       </div>
     </div>
   </div>
-  <div id="footer" class="d-flex justify-content-center">
-    <a href="https://twitter.com/am_vijay" target="_blank"><img src="./images/Twitter_Social_Icon_Rounded_Square_Color.png" width="32" height="32"></a>
-	&nbsp;
-	<a href="https://github.com/AMVijay" target="_blank"><img src="./images/GitHub-Mark-32px.png"></a>
-	&nbsp;
-	<a href="https://www.linkedin.com/in/vijayaraaghavan-manoharan-a4388927/" target="_blank"><img src="./images/LI-In-Bug.png" width="40" height="32"></a>
-  </div>
+  <div id="footer" class="d-flex justify-content-center"></div>
 </body>
 
 </html>
