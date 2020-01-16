@@ -1,0 +1,84 @@
+<h1 id="hadoop-installation-and-setup">Hadoop Installation and Setup</h1>
+<p>Last Updated On 01/15/2020</p>
+<h2 id="linux-update">Linux Update</h2>
+<p><code>sudo apt update</code><br>
+<code>sudo apt upgrade</code></p>
+<h2 id="install-ssh-in-linux">Install SSH in Linux</h2>
+<p><code>sudo apt-get install ssh</code><br>
+<code>sudo apt-get install ca-certificates</code><br>
+<code>sudo service ssh restart</code></p>
+<h2 id="update-hadoop-installation">Update Hadoop Installation</h2>
+<p><code>sudo apt install wget</code><br>
+<code>wget &lt;hadoop tar http path&gt;</code> - If required perform checksum for reliability, if required add option <code>--no-check-certificate</code><br>
+<code>tar -xzvf &lt;hadoop tar file&gt;</code>   (x - extract, z - use gzip, v - verbose, f - file)<br>
+<code>sudo mv &lt;hadoop extracted folder&gt; /usr/local/hadoop</code></p>
+<h2 id="installupdate-jdkjre">Install/Update JDK/JRE</h2>
+<p><code>sudo apt install default-jre</code> - This normally installs the Java in /usr/lib/jvm/, and updates the softlink of /usr/bin/java to the installable.<br>
+<code>sudo apt install default-jdk</code> -<br>
+<code>sudo update-java-alternatives --list</code> or  <code>sudo update-alternatives --config java</code> - (This is list down all java installable and its path in the os, we can select default JRE in the OS for all users)<br>
+Or<br>
+to Install precise Java Version, mention the java version as stated below.<br>
+<code>wget --no-check-certificate https://corretto.aws/downloads/latest/amazon-corretto-8-x64-linux-jdk.tar.gz</code><br>
+<code>tar -xzvf amazon-corretto-8-x64-linux-jdk.tar.gz</code><br>
+<code>sudo mv amazon-corretto-8.242.07.1-linux-x64/ /usr/local/jdk8</code><br>
+Update <code>sudo nano /etc/profile</code> as below, so that JAVA_HOME will set in OS level.</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token comment"># JAVA PATH Settings</span>
+<span class="token function">export</span> JAVA_HOME<span class="token operator">=</span>/usr/local/jdk8
+<span class="token function">export</span> PATH<span class="token operator">=</span><span class="token variable">$PATH</span><span class="token keyword">:</span><span class="token variable">$JAVA_HOME</span>/bin
+</code></pre>
+<h2 id="update-hadeep-env.sh-in-hadoop">Update <a href="http://hadeep-env.sh">hadeep-env.sh</a> in Hadoop</h2>
+<p><code>sudo nano /usr/local/hadoop/etc/hadoop/hadoop-env.sh</code><br>
+<code>export JAVA_HOME=/usr/local/jdk8</code><br>
+<code>export HADOOP_HOME=/usr/local/hadoop/</code><br>
+<code>export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin</code></p>
+<p>Add below started lines in /usr/local/hadoop/etc/hadoop/hadoop-env.sh  as below</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">export</span> HDFS_NAMENODE_USER<span class="token operator">=</span>admin
+<span class="token function">export</span> HDFS_DATANODE_USER<span class="token operator">=</span>admin
+<span class="token function">export</span> HDFS_SECONDARYNAMENODE_USER<span class="token operator">=</span>admin
+<span class="token function">export</span> YARN_RESOURCEMANAGER_USER<span class="token operator">=</span>admin
+<span class="token function">export</span> YARN_NODEMANAGER_USER<span class="token operator">=</span>admin
+</code></pre>
+<h2 id="run-mapreduce-algorithm">Run MapReduce Algorithm</h2>
+<p><code>mkdir ~/input</code><br>
+<code>cp /usr/local/hadoop/etc/hadoop/*.xml ~/input</code><br>
+<code>/usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.2.jar grep ~/input ~/grep_example 'allowed[.]*'</code><br>
+If ~/grep_example already exists, then delete the folder <code>rm -ef ~/grep_example</code></p>
+<p><code>cat ~/grep_example/*</code> to check the output of mapandreduce</p>
+<h2 id="ssh-configuration">SSH Configuration</h2>
+<p><code>sudo apt install openssh-server openssh-client</code><br>
+<code>ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa</code><br>
+<code>cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</code><br>
+<code>chmod 0600 ~/.ssh/authorized_keys</code></p>
+<h2 id="modify-configuration">Modify Configuration</h2>
+<p><code>sudo nano /usr/local/hadoop/etc/hadoop/core-site.xml</code> as</p>
+<pre class=" language-xml"><code class="prism  language-xml">	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>fs.defaultFS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>hdfs://localhost:9000<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p><code>sudo nano /usr/local/hadoop/etc/hadoop/hdfs-site.xml</code> as</p>
+<pre class=" language-xml"><code class="prism  language-xml">	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>dfs.replication<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>dfs.namenode.name.dir<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>/usr/local/hadoop/data/namenode<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>dfs.datanode.data.dir<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>/usr/local/hadoop/data/datanode<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p><code>sudo nano /usr/local/hadoop/etc/hadoop/mapred-site.xml</code><br>
+<code>sudo nano /usr/local/hadoop/etc/hadoop/yarn-site.xml</code></p>
+<h2 id="startstop-the-hdfs-file-system">Start/stop the hdfs file system</h2>
+<p><code>sudo /usr/local/hadoop/bin/hdfs namenode -format</code> - format the namenode<br>
+<code>sudo /usr/local/hadoop/sbin/start-dfs.sh</code><br>
+<code>sudo /usr/local/hadoop/sbin/stop-dfs.sh</code></p>
+<p>By default, we should be able to access namenode in <a href="http://localhost:9870/">http://localhost:9870/</a></p>
+
