@@ -45,7 +45,7 @@
 	<div id="content" class="container">
 
 <h1 id="hadoop-installation-and-setup">Hadoop Installation and Setup</h1>
-<p>Last Updated On 02/18/2020</p>
+<p>Last Updated On 02/20/2020</p>
 <h2 id="linux-update-the-package-version-and-upgrade">Linux : Update the Package Version and Upgrade</h2>
 <p>Below commands can be used to update linux package version in local repository and upgrade:</p>
 <ul>
@@ -144,27 +144,19 @@
 <span class="hljs-params">&lt;/configuration&gt;</span>
 </code></pre>
 </li>
-<li>Change <code>sudo nano /usr/local/hadoop/etc/hadoop/yarn-site.xml</code> as <pre><code class="lang-xml"><span class="hljs-params">&lt;configuration&gt;</span>
- <span class="hljs-params">&lt;property&gt;</span>
-      <span class="hljs-params">&lt;name&gt;</span>mapreduce.framework.name<span class="hljs-params">&lt;/name&gt;</span>
-      <span class="hljs-params">&lt;value&gt;</span>yarn<span class="hljs-params">&lt;/value&gt;</span>
- <span class="hljs-params">&lt;/property&gt;</span>
- <span class="hljs-params">&lt;property&gt;</span>
-      <span class="hljs-params">&lt;name&gt;</span>mapreduce.application.classpath<span class="hljs-params">&lt;/name&gt;</span>
-      <span class="hljs-params">&lt;value&gt;</span>$HADOOP_MAPRED_HOME<span class="hljs-meta-keyword">/share/</span>hadoop<span class="hljs-meta-keyword">/mapreduce/</span>*:$HADOOP_MAPRED_HOME<span class="hljs-meta-keyword">/share/</span>hadoop<span class="hljs-meta-keyword">/mapreduce/</span>lib<span class="hljs-comment">/*&lt;/value&gt;
- &lt;/property&gt;
-&lt;/configuration&gt;</span>
+<li>Change <code>sudo nano /usr/local/hadoop/etc/hadoop/yarn-site.xml</code> as <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">property</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>yarn.nodemanager.aux-services<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">value</span>&gt;</span>mapreduce_shuffle<span class="hljs-tag">&lt;/<span class="hljs-name">value</span>&gt;</span> 
+ <span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span>
 </code></pre>
 </li>
 <li>Change <code>sudo nano /usr/local/hadoop/etc/hadoop/mapred-site.xml</code> as <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">property</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>yarn.nodemanager.aux-services<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">value</span>&gt;</span>mapreduce_shuffle<span class="hljs-tag">&lt;/<span class="hljs-name">value</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">property</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>yarn.nodemanager.env-whitelist<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">value</span>&gt;</span>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME<span class="hljs-tag">&lt;/<span class="hljs-name">value</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">property</span>&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>mapreduce.framework.name<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">value</span>&gt;</span>yarn<span class="hljs-tag">&lt;/<span class="hljs-name">value</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span>
 </code></pre>
 </li>
