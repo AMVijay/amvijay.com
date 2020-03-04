@@ -2,31 +2,31 @@
   {
     "title": "How Http Works",
     "description": "This post describes how https works between browser and server",
-    "url": "https://amvijay.github.io/how-https-works"
+    "url": "/how-https-works"
   },
   {
 	"title": "Python Virual Environment Setup",
     "description": "This post describes how to setup python virual environment in windows",
-    "url": "https://amvijay.github.io/python-virtualenv"
+    "url": "/python-virtualenv"
   },
   {
 	"title": "NextCloud Installation, Configuration Steps",
     "description": "This post describes how to setup NextCloud in Linux, Debian, Windows Linux App",
-    "url": "https://amvijay.github.io/nextcloud-setup"
+    "url": "/nextcloud-setup"
   },
   {
 	"title": "JVM Garbage Collection",
     "description": "This post describes how JVM Garbage Collection works",
-    "url": "https://amvijay.github.io/jvm-garbage-collection"
+    "url": "/jvm-garbage-collection"
   },
   {
 	"title": "Spring MVC Architecture",
     "description": "This post describes the Spring MVC Architecture",
-    "url": "https://amvijay.github.io/spring-mvc-architecture"
+    "url": "/spring-mvc-architecture"
   },
   {
 	"title": "Hadoop Installation, Configuration, Architecture",
     "description": "This post describes the Hadoop Installation, Configuration, Architecture",
-    "url": "https://amvijay.github.io/hadoop"
+    "url": "/hadoop"
   }
 ]
