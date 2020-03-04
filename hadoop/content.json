@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Hadoop HDFS and YARN Configuration with Single Node in Linux",
+    "description": "This post describes how hadoop HDFS and YARN can be setup in Linux machine as Single Node",
+    "url": "/hadoop/hadoop-setup-steps"
+  },
+  {
+	"title": "Apache Spark Configuration in Linux",
+    "description": "This post describes how Apache Spark can be setup in Linux and run master and worker node",
+    "url": "/hadoop/spark-setup-steps"
+  },
+  {
+	"title": "Apache Spark Architecture and Components",
+    "description": "This post describes about Apache Spark Architecture and Components Details",
+    "url": "/hadoop/spark-architecture"
+  }
+]
