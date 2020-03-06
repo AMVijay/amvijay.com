@@ -1,5 +1,6 @@
 # How Https Works
-* Last Updated on 2019-10-14
+* Last Updated on 2019-10-14  
+
 Nowadays, most of the latest browsers enforce to use https mostly for web communication between server and client. Let’s understand what https is about and how it works.
 
 HTTPS is secured http protocol to transmit data between client and server.     SSL/TLS protocol is used for secured data transmission, and http protocol is used for http object communication between client and server. 
