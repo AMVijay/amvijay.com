@@ -13,10 +13,9 @@
 * PIP can be upgraded to latest version using command `python -m pip install -U pip`
 * Navigate to the python installed directory, and create folder venv for virtual environments.
 * Create Virtual environment using command `virtualenv --system-site-packages -p python ./venv`
-  ![](https://amvijay.github.io/images/20191103-python-virualenv-creation.JPG)
+  ![](https://amvijay.github.io/images/python-virualenv-creation.JPG)
 * Activate the virual environment by navigating to `.\venv\Scripts\activate`.
 * Upgrade the PIP in virtualenv using command `pip install --upgrade pip` 
-
 
 
 ## Visual Studio Code - Permission Error on Python venv activate`
