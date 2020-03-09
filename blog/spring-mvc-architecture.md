@@ -5,7 +5,7 @@ Spring MVC is a web application development framework enhanced from java servlet
 
 ## In general, MVC Architecture is:
 
-<img src="https://amvijay.github.io/images/general-mvc-architecture.jpg" style="max-width: 100%"/>
+![](https://amvijay.github.io/images/general-mvc-architecture.jpg)
 
 Here, 
 * View is the user interface where user would see the UI. Typically, view is written in JSP, html5. 
@@ -14,7 +14,7 @@ Here,
 
 ## Spring MVC Architecture is: 
 
-<img src="https://amvijay.github.io/images/spring-mvc-architecture.jpg" style="max-width: 100%"/>
+![](https://amvijay.github.io/images/spring-mvc-architecture.jpg)
 
 Here, 
 * View - this represents the user interface, typically it will be developed using JSP, html, JavaScript.
