@@ -5,13 +5,13 @@ Last Modified On 01/21/2020
 Apache Spark is a Distributed Data Processing framework in real-time, batch. Spark RDD object is a input for any Spark Framework Processing. Spark Programming starts in creating RDD Object from any data it reads. This RDD object is partitioned into multiple chunks and processed in worker nodes in parallel. Any task execution in Spark will be on RDD object only, and task will be either transformation, action and persistence.  
 
 ## Apache Spark Architecture
-![](./20200120-apache-spark-architecture.jpg)
+![](https://amvijay.github.io/images/apache-spark-architecture.jpg)
 
 * Spark Master Node manages the task distribution to the worker nodes, and worker nodes life cycle. 
 * Spark Worker Node performs task execution and updates it status back to Master Node.
 
 ## Apache Spark Components
-![](./20200120-apache-spark-component.jpg)
+![](https://amvijay.github.io/images/apache-spark-component.jpg)
 * Spark Core 
 	* It is the base, fundamental component for Spark. 
 	* It contains functional implementation to manage RDD and task scheduling, RDD distribution, I/O Operations in various programming languages Java, Scala, Python, and R.
