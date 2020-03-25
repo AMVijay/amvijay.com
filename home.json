@@ -25,6 +25,11 @@
     "url": "/spring-mvc-architecture"
   },
   {
+	"title": "Java Keytool Command Cheat Sheet",
+	"description": "This page has java keytool command references...",
+	"url": "/java-keytool-cheatsheet"
+  },
+  {
 	"title": "Hadoop Installation, Configuration, Architecture",
     "description": "This post describes the Hadoop Installation, Configuration, Architecture",
     "url": "/hadoop"
