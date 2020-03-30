@@ -1,8 +1,7 @@
 # Java Keytool CheatSheet
 
 ## What is Java Keytool?
-
-
+Java Keytool is a command line app to manage digital certificates with public and private key in a java language understandable keystore.
 
 ### Generate keystore
 `keytool -genkey -alias <ALIAS_NAME> -keyalg RSA -sigalg SHA256withRSA -keysize 2048 -validity 365 -keystore <keystore.jks>`
