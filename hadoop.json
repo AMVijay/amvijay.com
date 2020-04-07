@@ -18,5 +18,11 @@
 	"title": "Apache Spark Data Processing From HDFS",
     "description": "This post describes about Apache Spark Processing From HDFS",
     "url": "/hadoop/spark-data-processing-from-hdfs"
+  },
+  {
+	"title": "Apache Flume Architecture and Sample Use Cases",
+    "description": "This post describes what is Apache Flume, its architecture, and some examples",
+    "url": "/hadoop/flume-architecture-setup"
   }
+  
 ]
