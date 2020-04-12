@@ -1,4 +1,4 @@
-# Setup TV as Digital Dashboard to Display ToDo List.
+# Setup Family Dashboard in TV
 Last updated on 2020-04-11
 
 ## Requirements
