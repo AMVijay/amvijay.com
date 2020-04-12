@@ -38,6 +38,10 @@
 	"title": "Corona Impacted Count by Country",
 	"description": "This page shows number of people impacted by Corona Virus in each Country",
 	"url": "https://amvijay.github.io/corona-impact"
+  },
+  {
+	"title": "Setup TV as Family Dashboard",
+	"description": "This blog has steps to setup Family Dashboard in TV",
+	"url": "/setup-tv-dashboard"
   }
-  
 ]
