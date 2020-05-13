@@ -1,28 +1,29 @@
-[
-  {
-    "title": "Hadoop HDFS and YARN Configuration with Single Node in Linux",
-    "description": "This post describes how hadoop HDFS and YARN can be setup in Linux machine as Single Node",
-    "url": "/hadoop/hadoop-setup-steps"
-  },
-  {
-	"title": "Apache Spark Configuration in Linux",
-    "description": "This post describes how Apache Spark can be setup in Linux and run master and worker node",
-    "url": "/hadoop/spark-setup-steps"
-  },
-  {
-	"title": "Apache Spark Architecture and Components",
-    "description": "This post describes about Apache Spark Architecture and Components Details",
-    "url": "/hadoop/spark-architecture"
-  },
-  {
-	"title": "Apache Spark Data Processing From HDFS",
-    "description": "This post describes about Apache Spark Processing From HDFS",
-    "url": "/hadoop/spark-data-processing-from-hdfs"
-  },
-  {
-	"title": "Apache Flume Architecture and Sample Use Cases",
-    "description": "This post describes what is Apache Flume, its architecture, and some examples",
-    "url": "/hadoop/flume-architecture-setup"
-  }
-  
-]
+{
+  "blogs": [
+    {
+      "title": "Hadoop HDFS and YARN Configuration with Single Node in Linux",
+      "description": "This post describes how hadoop HDFS and YARN can be setup in Linux machine as Single Node",
+      "url": "/hadoop/hadoop-setup-steps"
+    },
+    {
+      "title": "Apache Spark Configuration in Linux",
+      "description": "This post describes how Apache Spark can be setup in Linux and run master and worker node",
+      "url": "/hadoop/spark-setup-steps"
+    },
+    {
+      "title": "Apache Spark Architecture and Components",
+      "description": "This post describes about Apache Spark Architecture and Components Details",
+      "url": "/hadoop/spark-architecture"
+    },
+    {
+      "title": "Apache Spark Data Processing From HDFS",
+      "description": "This post describes about Apache Spark Processing From HDFS",
+      "url": "/hadoop/spark-data-processing-from-hdfs"
+    },
+    {
+      "title": "Apache Flume Architecture and Sample Use Cases",
+      "description": "This post describes what is Apache Flume, its architecture, and some examples",
+      "url": "/hadoop/flume-architecture-setup"
+    }
+  ]
+}

@@ -1,47 +1,50 @@
-[
-  {
-    "title": "How Http Works",
-    "description": "This post describes how https works between browser and server",
-    "url": "/how-https-works"
-  },
-  {
-	"title": "Python Virual Environment Setup",
-    "description": "This post describes how to setup python virual environment in windows",
-    "url": "/python-virtualenv-setup"
-  },
-  {
-	"title": "NextCloud Installation, Configuration Steps",
-    "description": "This post describes how to setup NextCloud in Linux, Debian, Windows Linux App",
-    "url": "/nextcloud-setup"
-  },
-  {
-	"title": "JVM Garbage Collection",
-    "description": "This post describes how JVM Garbage Collection works",
-    "url": "/jvm-garbage-collection"
-  },
-  {
-	"title": "Spring MVC Architecture",
-    "description": "This post describes the Spring MVC Architecture",
-    "url": "/spring-mvc-architecture"
-  },
-  {
-	"title": "Java Keytool Command Cheat Sheet",
-	"description": "This page has java keytool command references...",
-	"url": "/java-keytool-cheatsheet"
-  },
-  {
-	"title": "Hadoop Installation, Configuration, Architecture",
-    "description": "This post describes the Hadoop Installation, Configuration, Architecture",
-    "url": "/hadoop"
-  },
-  {
-	"title": "Corona Impacted Count by Country",
-	"description": "This page shows number of people impacted by Corona Virus in each Country",
-	"url": "https://amvijay.github.io/corona-impact"
-  },
-  {
-	"title": "Setup TV as Family Dashboard",
-	"description": "This blog has steps to setup Family Dashboard in TV",
-	"url": "/setup-tv-dashboard"
-  }
-]
+{
+  "blogs": [
+    {
+      "title": "How Http Works",
+      "description": "This post describes how https works between browser and server",
+      "url": "/how-https-works"
+    },
+    {
+      "title": "Python Virual Environment Setup",
+      "description": "This post describes how to setup python virual environment in windows",
+      "url": "/python-virtualenv-setup"
+    },
+    {
+      "title": "NextCloud Installation, Configuration Steps",
+      "description": "This post describes how to setup NextCloud in Linux, Debian, Windows Linux App",
+      "url": "/nextcloud-setup"
+    },
+    {
+      "title": "JVM Garbage Collection",
+      "description": "This post describes how JVM Garbage Collection works",
+      "url": "/jvm-garbage-collection"
+    },
+    {
+      "title": "Spring MVC Architecture",
+      "description": "This post describes the Spring MVC Architecture",
+      "url": "/spring-mvc-architecture"
+    },
+    {
+      "title": "Java Keytool Command Cheat Sheet",
+      "description": "This page has java keytool command references...",
+      "url": "/java-keytool-cheatsheet"
+    },
+    {
+      "title": "Corona Impacted Count by Country",
+      "description": "This page shows number of people impacted by Corona Virus in each Country",
+      "url": "https://amvijay.github.io/corona-impact"
+    },
+    {
+      "title": "Setup TV as Family Dashboard",
+      "description": "This blog has steps to setup Family Dashboard in TV",
+      "url": "/setup-tv-dashboard"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Hadoop",
+	  "url": "/hadoop"
+    }
+  ]
+}
