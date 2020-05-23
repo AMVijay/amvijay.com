@@ -50,6 +50,10 @@
     {
       "name": "Hadoop",
 	  "url": "/hadoop"
-    }
+    },
+	{
+		"name": "Data Structure",
+		"url": "/datastructure"
+	}
   ]
 }

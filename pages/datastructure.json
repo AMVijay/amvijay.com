@@ -1,0 +1,10 @@
+{
+	"blogs" : [
+		{
+		  "title": "Linear Data Structure",
+		  "description": "This post explains what Linear Data Structure is and its various types",
+		  "url": "/datastructure/linear-datastructure"
+		}
+	]
+
+}
