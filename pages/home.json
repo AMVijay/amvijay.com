@@ -1,48 +1,57 @@
 {
   "blogs": [
     {
-      "title": "How Http Works",
+      "title": "How https works?",
       "description": "This post describes how https works between browser and server",
+	  "lastUpdatedDate" : "06-Mar-2020",
       "url": "/how-https-works"
     },
     {
       "title": "Python Virual Environment Setup",
       "description": "This post describes how to setup python virual environment in windows",
+	  "lastUpdatedDate" : "07-Mar-2020",
       "url": "/python-virtualenv-setup"
     },
     {
       "title": "NextCloud Installation, Configuration Steps",
       "description": "This post describes how to setup NextCloud in Linux, Debian, Windows Linux App",
+	  "lastUpdatedDate" : "07-Mar-2020",
       "url": "/nextcloud-setup"
     },
     {
       "title": "JVM Garbage Collection",
       "description": "This post describes how JVM Garbage Collection works",
+	  "lastUpdatedDate" : "06-Mar-2020",
       "url": "/jvm-garbage-collection"
     },
     {
       "title": "Spring MVC Architecture",
       "description": "This post describes the Spring MVC Architecture",
+	  "lastUpdatedDate" : "09-Mar-2020",
       "url": "/spring-mvc-architecture"
     },
     {
       "title": "Java Keytool Command Cheat Sheet",
       "description": "This page has java keytool command references...",
+	  "lastUpdatedDate" : "31-Mar-2020",
       "url": "/java-keytool-cheatsheet"
     },
     {
       "title": "Corona Impacted Count by Country",
       "description": "This page shows number of people impacted by Corona Virus in each Country",
+	  "lastUpdatedDate" : "30-Mar-2020",
       "url": "https://amvijay.github.io/corona-impact"
     },
     {
       "title": "Setup TV as Family Dashboard",
       "description": "This blog has steps to setup Family Dashboard in TV",
+	  "lastUpdatedDate" : "15-May-2020",
       "url": "/setup-tv-dashboard"
     },
 	{
       "title": "EhCache Implementation in Spring Framework",
       "description": "Details about EhCache 3 and 2 implementation in Spring Framework",
+	  "lastUpdatedDate" : "15-May-2020",
       "url": "/ehcache-spring-implementation"
     }
   ],
