@@ -1,11 +1,7 @@
-# Garbage Collection in JVM and various types
-* Last Updated on 2019-12-09
-
 ## What is Garbage Collection in JVM
+Garbage Collection is a process in JVM (Java Virtual Machine) to identify the unused objects in JVM Heap Space and clean up the objects to gain the memory back to Heap Space. If the process is not able to clean the garbage objects and gain memory back, then it will take the JVM to be Out Of Memory, and that is called JVM Crash, Memory Leak in Java Development World. In Java Program, N number of objects would have u.sed a method to implement logic. Each Objects would consume memory to hold as much as data in a method call. But once the method call completed, the memory occupied by objects won't be released immediatly. Those objects are identified in Garbage Collection Process by JVM and that objects memory references are deleted to gain the memory back for next method call execution.
 
-Garbage Collection in a process to identify the unused objects in JVM Heap Space and clean up to gain the memory. in Java Program, N number of objects would have used a method to implement logic. Each Objects would consume memory to hold as much as data in a method call. But once the method call completed, the memory occupied by objects won't be released immediatly. Those objects are identified in Garbage Collection Process by JVM and that objects memory references are deleted to gain the memory back for next method call execution.
-
-This Garbage Collection process got matured in JVM in its each release evolution.
+This Garbage Collection implementation is being improved in each JVM releases over the years.
 
 Before heading into various types Garbage Collection available in JVM, quick overview of JVM:
 
@@ -52,7 +48,7 @@ Below are the types of Garbage Collection in JVM
 
 ## Serial GC
 
-Serial GC iterates through all the objects in JVM Heap Space New Generation Memory Area one by one and marks which are all the objects unused. Once all the objects are marked, it will erase the content in memory and gain back the memory. When number of objects are less in JVM Heap Space New Generation Memory, then the Serial GC takes less time. Otherwise, Serial GC takes longer time to mark the objects.
+Serial GC iterates through all the objects in JVM Heap Space New Generation Memory Area one by one and marks which are all the objects unused. Once all the objects are marked, it will erase the content in memory and gain back the memory. When number of objects are less in JVM Heap Space New Generation Memory, then the Serial GC takes less time. Otherwise, Serial GC takes longer time to mark the unused objects.
 
 `java -XX:+UseSerialGC`
 
