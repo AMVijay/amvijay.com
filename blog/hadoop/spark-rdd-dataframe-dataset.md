@@ -1,6 +1,6 @@
 # Spark - RDD, Dataframe, Dataset
 
-Spark has 3 important objects to represent data collection to perform operations on data in distributed computing. It is called [RDD](#rdd-resilient-distributed-datset), [Dataframe](#spark-dataframe), Dataset.
+Spark has 3 important objects to represent data collection to perform operations on data in distributed computing. It is called RDD, Dataframe, Dataset.
 
 ## RDD - Resilient Distributed Dataset
 * Spark RDD is a immutable object, created from SparkContext object as below. Once RDD object is created, the object data can't be modified. However new RDD can be created from existing RDD in data operations.
