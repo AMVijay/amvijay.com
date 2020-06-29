@@ -3,8 +3,14 @@
 		{
 		  "title": "Linear Data Structure",
 		  "description": "This post explains what Linear Data Structure is and its various types",
-		  "lastUpdatedDate" : "23-May-2020",
+		  "lastUpdatedDate" : "29-Jun-2020",
 		  "url": "/datastructure/linear-datastructure"
+		},
+		{
+		  "title": "Binary Search",
+		  "description": "",
+		  "lastUpdatedDate" : "29-Jun-2020",
+		  "url": "/datastructure/binary-search"
 		}
 	]
 
