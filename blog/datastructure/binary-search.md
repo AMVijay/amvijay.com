@@ -43,7 +43,7 @@ matchedElementIndex = binarySearch(11,0,len(datacollection)-1,datacollection)
 print("Element :: " + str(11) + " is at index :: " + str(matchedElementIndex))
 ```
 
-** Reference Implementation 2**
+**Reference Implementation 2**
 ```python
 # Method to perform binary search
 def binarysearch(searchElement,sortedList):
