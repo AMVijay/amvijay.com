@@ -53,7 +53,14 @@
       "description": "Details about EhCache 3 and 2 implementation in Spring Framework",
 	  "lastUpdatedDate" : "15-May-2020",
       "url": "/ehcache-spring-implementation"
+    },
+	{
+      "title": "Spring MVC and Angular Fusion",
+      "description": "Details about how angular page can be rendered in Spring MVC",
+	  "lastUpdatedDate" : "08-Jul-2020",
+      "url": "/springmvc-angular-fusion"
     }
+	
   ],
   "categories": [
     {
