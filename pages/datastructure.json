@@ -11,6 +11,12 @@
 		  "description": "",
 		  "lastUpdatedDate" : "29-Jun-2020",
 		  "url": "/datastructure/binary-search"
+		},
+		{
+		  "title": "Fibonacci Search",
+		  "description": "",
+		  "lastUpdatedDate" : "13-Jul-2020",
+		  "url": "/datastructure/fibonacci-search"
 		}
 	]
 
