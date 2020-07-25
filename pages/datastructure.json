@@ -17,6 +17,18 @@
 		  "description": "",
 		  "lastUpdatedDate" : "13-Jul-2020",
 		  "url": "/datastructure/fibonacci-search"
+		},
+		{
+		  "title": "Merge Sort",
+		  "description": "",
+		  "lastUpdatedDate" : "16-Jul-2020",
+		  "url": "/datastructure/merge-sort"	
+		},
+		{
+		  "title": "Quick Sort",
+		  "description": "",
+		  "lastUpdatedDate" : "25-Jul-2020",
+		  "url": "/datastructure/quick-sort"	
 		}
 	]
 
