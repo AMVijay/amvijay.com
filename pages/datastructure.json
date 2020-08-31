@@ -7,6 +7,12 @@
 		  "url": "/datastructure/linear-datastructure"
 		},
 		{
+		  "title": "Non-Linear Data Structure",
+		  "description": "This post explains what Non-Linear Data Structure",
+		  "lastUpdatedDate" : "31-Aug-2020",
+		  "url": "/datastructure/nonlinear-datastructure"
+		},
+		{
 		  "title": "Binary Search",
 		  "description": "",
 		  "lastUpdatedDate" : "29-Jun-2020",
