@@ -1,6 +1,12 @@
 {
 	"blogs" : [
 		{
+		  "title": "HashTable - Explained",
+		  "description": "This post explains about HashTable Data Structure",
+		  "lastUpdatedDate" : "07-Sept-2020",
+		  "url": "/datastructure/hashtable"
+		},
+		{
 		  "title": "Linear Data Structure",
 		  "description": "This post explains what Linear Data Structure is and its various types",
 		  "lastUpdatedDate" : "29-Jun-2020",
