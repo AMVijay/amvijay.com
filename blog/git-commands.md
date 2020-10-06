@@ -8,5 +8,3 @@ Git is version control software.
 * `git add .` - This to add new files into staging for git commit into repository.
 * `git commit -m "<message>"` - To commit all files into local git repository.
 * `git push` - To push the local repository commits into remote repository.
-
-## Git Advanced Commands
