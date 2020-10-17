@@ -1,6 +1,3 @@
-# Apache Spark Installation in Linux
-Last updated : 01/20/2020
-
 ## Install Python 3.x version 
 * Check whether Python is installed already in machine using command `python3 -V` or ` python3 --version`, if not install the python 3.x version using command `sudo apt install python3`. If need to check what version of python available now in repository, command `apt search python3` can be used to check the version.
 * Check whether PIP is installed already in machine using command `pip3 --version` or `python3 -m pip --version`. If not, install using command `sudo apt install python3-pip`.

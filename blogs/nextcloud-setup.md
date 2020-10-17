@@ -1,6 +1,3 @@
-# Steps to install Next Cloud 16 in Linux/Debian/Debian Windows App. 
-* Last Updated on 2019-07-07
-
 ## Install Debian Linux App in Windows and Configuration
 * Install debian app in windows from windows store.
 	* installation will be done in C:\Users\<userdir>\AppData\Local\Packages as folder `TheDebianProject.DebianGNULinux_76v4gfsz19hv4`

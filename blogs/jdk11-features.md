@@ -1,5 +1,3 @@
-# JDK 11 Features Analysis
-
 ## Introduction
 * JDK 11 is the next release after JDK 8 came with Long Term Support (LTS).
 ---

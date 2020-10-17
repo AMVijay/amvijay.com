@@ -1,7 +1,8 @@
 {
 	"lastUpdatedDate" : "2020-05-15",
-	"author" : "Vijay/am.vijay@gmail.com/Vijayaraaghavan Manoharan",
+	"author" : "Vijayaraaghavan Manoharan",
 	"keywords" : "EhCache 3 and EhCache 2 implementation in Spring Framework",
 	"title" : "EhCache Implementation in Spring Framework",
-	"description" : "EhCache Implementation in Java Spring Framework"
+	"description" : "EhCache Implementation in Java Spring Framework",
+	"tags" : ["java", "ehcache", "caching","hadoop"]
 }

@@ -1,4 +1,3 @@
-# HashTable
 ## Introduction
 HashTable is a non-linear data structure, uses key-value design to organize the data as a collection. It can depicted as below in high level: 
 

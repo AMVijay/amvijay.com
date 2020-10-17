@@ -1,5 +1,4 @@
-# How Https Works
-* Last Updated on 2019-10-14  
+## Analysis Understanding
 
 Nowadays, most of the latest browsers enforce to use https mostly for web communication between server and client. Let’s understand what https is about and how it works.
 

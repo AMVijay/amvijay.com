@@ -1,5 +1,3 @@
-# Apache Spark Data Processing From HDFS
-* Last Updated on 2020-01-26
 ## Use Case Requirement
 * Load a file with large dataset into hdfs.
 * Use Spark to read the file from hdfs.

@@ -1,5 +1,3 @@
-# Linear Data Structure
-
 ## What is Linear Data Structure
 Linear Data Structure is about how collection of data stored and retrieved in sequencial way. Array, List, Stack and Queues are of linear data structure types. Each of these has its own way of linear data structure implmentation. 
 

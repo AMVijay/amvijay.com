@@ -4,37 +4,43 @@
       "title": "Hadoop HDFS and YARN Configuration with Single Node in Linux",
       "description": "This post describes how hadoop HDFS and YARN can be setup in Linux machine as Single Node",
 	  "lastUpdatedDate" : "07-Mar-2020",
-      "url": "/hadoop/hadoop-setup-steps"
+      "url": "/blog/hadoop/hadoop-setup-steps",
+	  "tags" : ["hadoop"]
     },
     {
       "title": "Apache Spark Configuration in Linux",
       "description": "This post describes how Apache Spark can be setup in Linux and run master and worker node",
 	  "lastUpdatedDate" : "07-Mar-2020",
-      "url": "/hadoop/spark-setup-steps"
+      "url": "/blog/hadoop/spark-setup-steps",
+	  "tags" : ["hadoop"]
     },
     {
       "title": "Apache Spark Architecture and Components",
       "description": "This post describes about Apache Spark Architecture and Components Details",
 	  "lastUpdatedDate" : "09-Mar-2020",
-      "url": "/hadoop/spark-architecture"
+      "url": "/blog/hadoop/spark-architecture",
+	  "tags" : ["hadoop"]
     },
     {
       "title": "Apache Spark Data Processing From HDFS",
       "description": "This post describes about Apache Spark Processing From HDFS",
 	  "lastUpdatedDate" : "07-Mar-2020",
-      "url": "/hadoop/spark-data-processing-from-hdfs"
+      "url": "/blog/hadoop/spark-data-processing-from-hdfs",
+	  "tags" : ["hadoop"]
     },
     {
       "title": "Apache Flume Architecture and Sample Use Cases",
       "description": "This post describes what is Apache Flume, its architecture, and some examples",
 	  "lastUpdatedDate" : "07-Apr-2020",
-      "url": "/hadoop/flume-architecture-setup"
+      "url": "/blog/hadoop/flume-architecture-setup",
+	  "tags" : ["hadoop"]
     },
 	{
       "title": "Spark - RDD, Dataframe, Dataset Detailed",
       "description": "",
 	  "lastUpdatedDate" : "18-Jun-2020",
-      "url": "/hadoop/spark-rdd-dataframe-dataset"
+      "url": "/blog/hadoop/spark-rdd-dataframe-dataset",
+	  "tags" : ["hadoop"]
     }
   ]
 }

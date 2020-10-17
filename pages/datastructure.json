@@ -4,43 +4,50 @@
 		  "title": "HashTable - Explained",
 		  "description": "This post explains about HashTable Data Structure",
 		  "lastUpdatedDate" : "07-Sept-2020",
-		  "url": "/datastructure/hashtable"
+		  "url": "/blog/datastructure/hashtable",
+		  "tags" : ["datastructure"]
 		},
 		{
 		  "title": "Linear Data Structure",
 		  "description": "This post explains what Linear Data Structure is and its various types",
 		  "lastUpdatedDate" : "29-Jun-2020",
-		  "url": "/datastructure/linear-datastructure"
+		  "url": "/blog/datastructure/linear-datastructure",
+		  "tags" : ["datastructure"]
 		},
 		{
 		  "title": "Non-Linear Data Structure",
 		  "description": "This post explains what Non-Linear Data Structure",
 		  "lastUpdatedDate" : "31-Aug-2020",
-		  "url": "/datastructure/nonlinear-datastructure"
+		  "url": "/blog/datastructure/nonlinear-datastructure",
+		  "tags" : ["datastructure"]
 		},
 		{
 		  "title": "Binary Search",
 		  "description": "",
 		  "lastUpdatedDate" : "29-Jun-2020",
-		  "url": "/datastructure/binary-search"
+		  "url": "/blog/datastructure/binary-search",
+		  "tags" : ["datastructure"]
 		},
 		{
 		  "title": "Fibonacci Search",
 		  "description": "",
 		  "lastUpdatedDate" : "13-Jul-2020",
-		  "url": "/datastructure/fibonacci-search"
+		  "url": "/blog/datastructure/fibonacci-search",
+		  "tags" : ["datastructure"]
 		},
 		{
 		  "title": "Merge Sort",
 		  "description": "",
 		  "lastUpdatedDate" : "16-Jul-2020",
-		  "url": "/datastructure/merge-sort"	
+		  "url": "/blog/datastructure/merge-sort",
+		  "tags" : ["datastructure"]		  
 		},
 		{
 		  "title": "Quick Sort",
 		  "description": "",
 		  "lastUpdatedDate" : "25-Jul-2020",
-		  "url": "/datastructure/quick-sort"	
+		  "url": "/blog/datastructure/quick-sort",
+		  "tags" : ["datastructure"]
 		}
 	]
 

@@ -1,6 +1,3 @@
-# Apache Flume Architecture and Setup Guide
-* Last Modified on 2020-04-07
-
 ## What is Apache Flume
 Apache Flume is a service framework to collect data from source (could be log files, twitter api, kafka, unix command), and store it in log files or HDFS.
 

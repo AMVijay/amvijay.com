@@ -1,6 +1,3 @@
-# Setup Family Dashboard in TV
-Last updated on 2020-04-11
-
 ## Requirements
 * TV 
 * Raspberry Pi

@@ -1,4 +1,4 @@
-# Render Angular Page inside Spring MVC
+## Objective
 This is an attempt to render angular page inside spring mvc application JSP page. 
 
 Spring MVC Application will have the components JSP for UI, and Controller Java Class, and Spring MVC Configuration as XML file or Java Annotation based.

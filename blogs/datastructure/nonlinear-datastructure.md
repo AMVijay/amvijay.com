@@ -1,5 +1,3 @@
-# Non Linear Data Structure
-
 ## Introduction
 * Non Linear Data Structure is opposite to Linear Data Structure, data inside would not be organized sequentially, rather it could be in hierarchical way or scattered in memory area with key to each element for access.
 * Hash Table, Tree, Graph are Non-Linear Data Structure types. 

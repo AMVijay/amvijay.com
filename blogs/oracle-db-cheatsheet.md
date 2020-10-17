@@ -1,6 +1,3 @@
-# Oracle Database CheatSheet
-* Last Updated on 2020-03-20
-
 ## Execution time of Stored Procedure
 ```oracle
 set timing on; 

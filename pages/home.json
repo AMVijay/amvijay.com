@@ -4,49 +4,49 @@
       "title" : "Git Commands",
       "description" : "Git Commands Quick Reference",
       "lastUpdatedDate" : "06-Oct-2020",
-      "url" : "/git-commands"
+      "url" : "/blog/git-commands"
     },
     {
       "title": "JDK11 Features - Analysis",
       "description": "This post JDK11 Features",
       "lastUpdatedDate": "02-Sep-2020",
-      "url": "/jdk11-features"
+      "url": "/blog/jdk11-features"
     },
     {
       "title": "How https works?",
       "description": "This post describes how https works between browser and server",
       "lastUpdatedDate": "06-Mar-2020",
-      "url": "/how-https-works"
+      "url": "/blog/how-https-works"
     },
     {
       "title": "Python Virual Environment Setup",
       "description": "This post describes how to setup python virual environment in windows",
       "lastUpdatedDate": "07-Mar-2020",
-      "url": "/python-virtualenv-setup"
+      "url": "/blog/python-virtualenv-setup"
     },
     {
       "title": "NextCloud Installation, Configuration Steps",
       "description": "This post describes how to setup NextCloud in Linux, Debian, Windows Linux App",
       "lastUpdatedDate": "07-Mar-2020",
-      "url": "/nextcloud-setup"
+      "url": "/blog/nextcloud-setup"
     },
     {
       "title": "JVM Garbage Collection",
       "description": "This post describes how JVM Garbage Collection works",
       "lastUpdatedDate": "07-Jun-2020",
-      "url": "/jvm-garbage-collection"
+      "url": "/blog/jvm-garbage-collection"
     },
     {
       "title": "Spring MVC Architecture",
       "description": "This post describes the Spring MVC Architecture",
       "lastUpdatedDate": "09-Mar-2020",
-      "url": "/spring-mvc-architecture"
+      "url": "/blog/spring-mvc-architecture"
     },
     {
       "title": "Java Keytool Command Cheat Sheet",
       "description": "This page has java keytool command references...",
       "lastUpdatedDate": "31-Mar-2020",
-      "url": "/java-keytool-cheatsheet"
+      "url": "/blog/java-keytool-cheatsheet"
     },
     {
       "title": "Corona Impacted Count by Country",
@@ -58,33 +58,33 @@
       "title": "Setup TV as Family Dashboard",
       "description": "This blog has steps to setup Family Dashboard in TV",
       "lastUpdatedDate": "11-Apr-2020",
-      "url": "/setup-tv-dashboard"
+      "url": "/blog/setup-tv-dashboard"
     },
     {
       "title": "EhCache Implementation in Spring Framework",
       "description": "Details about EhCache 3 and 2 implementation in Spring Framework",
       "lastUpdatedDate": "15-May-2020",
-      "url": "/ehcache-spring-implementation"
+      "url": "/blog/ehcache-spring-implementation"
     },
     {
       "title": "Spring MVC and Angular Fusion",
       "description": "Details about how angular page can be rendered in Spring MVC",
       "lastUpdatedDate": "08-Jul-2020",
-      "url": "/springmvc-angular-fusion"
+      "url": "/blog/springmvc-angular-fusion"
     }
   ],
   "categories": [
     {
       "name": "Hadoop",
-      "url": "/hadoop"
+      "url": "/page/hadoop"
     },
     {
       "name": "Data Structure",
-      "url": "/datastructure"
+      "url": "/page/datastructure"
     },
     {
-      "name": "#AWS",
-      "url": "/aws"
+      "name": "AWS",
+      "url": "/page/aws"
     }
   ]
 }

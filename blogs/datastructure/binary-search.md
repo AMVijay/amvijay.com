@@ -1,4 +1,4 @@
-# Binary Search
+## Binary Search - Algorithm
 
 Binary Search is a search algorithm to find the data in a sorted data structure collection.  
 Algorithm steps are :

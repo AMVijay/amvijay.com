@@ -1,5 +1,4 @@
-# Spring MVC
-* Last updated on 2020-01-22
+## Introduction
 
 Spring MVC is a web application development framework enhanced from java servlet api. It requires java web server to run. 
 

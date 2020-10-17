@@ -1,5 +1,3 @@
-# Git 
-
 ## Introduction
 Git is version control software.
 

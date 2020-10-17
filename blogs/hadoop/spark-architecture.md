@@ -1,6 +1,3 @@
-# Apache Spark Architecture and Components
-Last Modified On 01/21/2020
-
 ## What is Apache Spark
 Apache Spark is a Distributed Data Processing framework in real-time, batch. Spark RDD object is a input for any Spark Framework Processing. Spark Programming starts in creating RDD Object from any data it reads. This RDD object is partitioned into multiple chunks and processed in worker nodes in parallel. Any task execution in Spark will be on RDD object only, and task will be either transformation, action and persistence.  
 

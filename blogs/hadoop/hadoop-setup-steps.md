@@ -1,6 +1,3 @@
-# Hadoop Installation and Setup
-Last Updated On 02/21/2020
-
 ## Linux : Update the Package Version and Upgrade
 Below commands can be used to update linux package version in local repository and upgrade:
 * `sudo apt update`  
