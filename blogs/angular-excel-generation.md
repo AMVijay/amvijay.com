@@ -28,11 +28,9 @@ Example Implementation of Excel File Generation from Angular using exceljs node 
 ```typescript
 let workbook = new Workbook();
 let worksheet = workbook.addWorksheet("Person Details");
-
 worksheet.addRow(["Person Details"]);
 //Add Header Row
 worksheet.addRow(this.header);
-
 this.persons.forEach(person => {
     let row = worksheet.addRow();
     row.getCell(1).value = person.name;
@@ -40,7 +38,6 @@ this.persons.forEach(person => {
     row.getCell(3).value = person.phone;
 
 });
-
 workbook.xlsx.writeBuffer().then((data) => {
     let blob = new Blob([data], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
     fs.saveAs(blob, 'PersonSearchResults.xlsx');
