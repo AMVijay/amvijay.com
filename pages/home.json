@@ -1,5 +1,10 @@
 {
   "blogs": [
+	{
+	  "title" : "Excel Generation in Angular - Implementation Example",
+      "lastUpdatedDate" : "19-Nov-2020",
+      "url" : "/blog/angular-excel-generation"
+	},
     {
       "title" : "HTML - Whitespace between first div and body - Fix",
       "description" : "HTML - Whitespace between first div and body - Fix",
