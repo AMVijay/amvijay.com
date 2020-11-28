@@ -1,6 +1,11 @@
 {
   "blogs": [
     {
+      "title" : "Linear Data Structure Sorting Algorithms - Analysis and Comparison",
+      "lastUpdatedDate" : "28-Nov-2020",
+      "url" : "/blog/linear-datastructure-sorting-algorithms"
+    },
+    {
       "title" : "Angular Architecture - Analysis",
       "lastUpdatedDate" : "21-Nov-2020",
       "url" : "/blog/angular-architecture"
