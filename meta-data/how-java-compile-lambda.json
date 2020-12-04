@@ -3,7 +3,7 @@
   "lastUpdatedDate" : "04-December-2020",
   "author" : "Vijayaraaghavan Manoharan",
   "keywords" : "java lambda compiler",
-  "description" : "How Java Compile and Create Bytecode of Lambda implementation - Analysis"
-  "tags" : [{"java","lambda"}]
-  "content" : "https://raw.githubusercontent.com/AMVijay/java-learning/main/lambda/how-java-compile-lambda.md"
+  "description" : "How Java Compile and Create Bytecode of Lambda implementation - Analysis",
+  "tags" : ["java","lambda"],
+  "content":"https://raw.githubusercontent.com/AMVijay/java-learning/main/lambda/how-java-compile-lambda.md"
 }
