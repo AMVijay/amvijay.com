@@ -3,6 +3,7 @@ Now a days, most of the enterprise application would have some portion in cloud 
 
 ## Solution Option 1
 **Design Concept Diagram**  
+
 ![](https://amvijay.com/images/onprem-cloud-datasync-solution1.jpg)
 
 * This solution design uses microservice architecture. Idea is to have CRUD Services for each business entity in cloud and on-premise and invoke these services when required.
@@ -15,6 +16,7 @@ Now a days, most of the enterprise application would have some portion in cloud 
 
 ## Solution Option 2 (AWS)
 **Design Concept Diagram**  
+
 ![](https://amvijay.com/images/onprem-cloud-datasync-solution2.jpg)
 
 * This solution is for AWS and On-premise infrastructure alone. Here, AWS Datapipeline service is used for syncing the cloud and on-prem data. 
