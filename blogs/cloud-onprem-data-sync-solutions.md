@@ -6,8 +6,10 @@ Now a days, most of the enterprise application would have some portion in cloud 
 
 
 * This solution design uses microservice architecture. Idea is to have CRUD Services for each business entity in cloud and on-premise and invoke these services when required.
+
 **Pros**
 * This solution would fit with any cloud provider (either AWS or Azure) and on-premise.
+
 **Cons**
 * Cost might be high as it required too many cloud services and might have too many network calls.
 
