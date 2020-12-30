@@ -1,24 +1,29 @@
 {
   "blogs": [
-	{
-      "title" : "Angular Integration In Legacy Applicaiton - Solution Options",
-      "lastUpdatedDate" : "12-Dec-2020",
-      "url" : "/blog/angular-integration-legacy-application"
+    {
+      "title": "Data Sync between Cloud/AWS and OnPremise - Solution Options",
+      "lastUpdatedDate": "29-Dec-2020",
+      "url": "/blog/cloud-onprem-data-sync-solutions"
     },
     {
-      "title" : "How Java Compiles and Creates Bytecode of Lambda Implementation",
-      "lastUpdatedDate" : "04-Dec-2020",
-      "url" : "blog/how-java-compile-lambda"
+      "title": "Angular Integration In Legacy Applicaiton - Solution Options",
+      "lastUpdatedDate": "12-Dec-2020",
+      "url": "/blog/angular-integration-legacy-application"
     },
     {
-      "title" : "Linear Data Structure Sorting Algorithms - Analysis and Comparison",
-      "lastUpdatedDate" : "28-Nov-2020",
-      "url" : "/blog/linear-datastructure-sorting-algorithms"
+      "title": "How Java Compiles and Creates Bytecode of Lambda Implementation",
+      "lastUpdatedDate": "04-Dec-2020",
+      "url": "blog/how-java-compile-lambda"
     },
     {
-      "title" : "Angular Architecture - Analysis",
-      "lastUpdatedDate" : "21-Nov-2020",
-      "url" : "/blog/angular-architecture"
+      "title": "Linear Data Structure Sorting Algorithms - Analysis and Comparison",
+      "lastUpdatedDate": "28-Nov-2020",
+      "url": "/blog/linear-datastructure-sorting-algorithms"
+    },
+    {
+      "title": "Angular Architecture - Analysis",
+      "lastUpdatedDate": "21-Nov-2020",
+      "url": "/blog/angular-architecture"
     },
     {
       "title": "Excel Generation in Angular - Implementation Example",
