@@ -29,3 +29,10 @@ Now a days, most of the enterprise application would have some portion in cloud 
 
 **Cons**
 * For small entity, this implementation is little overhead for maintenance as it involves in pipeline structure maintenance and update.
+
+One example AWS data pipeline definition screenshot to export AWS RDS data to S3 location and invoke Onpremise Service to process the data. 
+![](https://amvijay.com/images/aws-datapipeline-cloud-onpremise-sync.jpg)
+Actual Pipeline definition source is available in https://github.com/AMVijay/aws-learning/blob/main/datapipeline/cloud-onprem-sync.json.  
+
+Here, If we compare AWS datapipeline against microservice solution, the microservice based solution need multiple services and resources in AWS cloud like API Gateway, lambda/container based microservices. But Datapipeline is simple to create and maintain for any complex data structures. 
+
