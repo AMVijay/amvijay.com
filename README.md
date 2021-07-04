@@ -1,2 +1,2 @@
-# amvijay.github.io
+# amvijay.com
 Vijay Github Profile
