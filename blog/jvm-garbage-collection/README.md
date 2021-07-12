@@ -1,3 +1,5 @@
+# Java/JVM Garbage Collection - Understanding 
+
 ## What is Garbage Collection in JVM
 Garbage Collection is a process in JVM (Java Virtual Machine) to identify the unused objects in JVM Heap Space and clean up the objects to gain the memory back to Heap Space. If the process is not able to clean the garbage objects and gain memory back, then it will take the JVM to be Out Of Memory, and that is called JVM Crash, Memory Leak in Java Development World. In Java Program, N number of objects would have u.sed a method to implement logic. Each Objects would consume memory to hold as much as data in a method call. But once the method call completed, the memory occupied by objects won't be released immediatly. Those objects are identified in Garbage Collection Process by JVM and that objects memory references are deleted to gain the memory back for next method call execution.
 
@@ -6,7 +8,7 @@ This Garbage Collection implementation is being improved in each JVM releases ov
 Before heading into various types Garbage Collection available in JVM, quick overview of JVM:
 
 ## JVM Architecture
-![](https://amvijay.github.io/images/jvm-architecture.jpg)
+![](https://amvijay.com/blog/jvm-garbage-collection/jvm-architecture.jpg)
 
 ### ClassLoader 
 * ClassLoader is responsible to load java language classes into JVM Memory Area - Class and Method Area.
@@ -28,7 +30,7 @@ Before heading into various types Garbage Collection available in JVM, quick ove
 
 Below diagram describes JVM Heap Memory inside what it is ...
 
-![](https://amvijay.github.io/images/jvm-heap-memory-architecture.jpg)
+![](https://amvijay.com/blog/jvm-garbage-collection/jvm-heap-memory-architecture.jpg)
 
 ### New Generation Object Memory
 * Any new Object created during Execution will be coming to Eden Memory Space of New Generation Memory Area.
