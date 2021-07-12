@@ -1,3 +1,5 @@
+# Git Commands - Reference
+
 ## Introduction
 Git is version control software.
 
@@ -9,3 +11,4 @@ Git is version control software.
 * `git rm <file path1>` - Specified file file whichever was deleted will be staged for git commit.
 * `git commit -m "<message>"` - To commit all files into local git repository.
 * `git push` - To push the local repository commits into remote repository.
+* `git reset <file path>` - To reset the staged files (unstaging) using git add command. 
