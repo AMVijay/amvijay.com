@@ -1,3 +1,5 @@
+# EHCache Implementation Using Spring Framework
+
 ## What is EhCache ?
 EhCache is caching framework used in Java Application to improve performance in data intensive transactions. It is an open source framework.
 
@@ -91,5 +93,3 @@ EhCache configuration XML based on JSR-107 standard:
 
 </config>
 ```
-
-## EhCache 2 Implementation in Spring Framwork

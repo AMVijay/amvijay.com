@@ -1,3 +1,5 @@
+# Angular Application integration in Legacy Application
+
 ## Objective
 Here, exploring the solution options to integrate the Angular Application with Legacy Application running with JSP, PHP, or any other UI Page.
 
