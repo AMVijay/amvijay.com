@@ -1,8 +1,10 @@
+# How https works
+
 ## Analysis Understanding
 
 Nowadays, most of the latest browsers enforce to use https mostly for web communication between server and client. Let’s understand what https is about and how it works.
 
-HTTPS is secured http protocol to transmit data between client and server.     SSL/TLS protocol is used for secured data transmission, and http protocol is used for http object communication between client and server. 
+HTTPS is secured http protocol to transmit data between client and server. SSL/TLS protocol is used for secured data transmission, and http protocol is used for http object communication between client and server. 
 
 SSL/TLS uses asymmetric encryption and decryption which comes with two keys called public key and private key.  These keys are enclosed inside a single file called SSL certificate and configured in server.  
 
