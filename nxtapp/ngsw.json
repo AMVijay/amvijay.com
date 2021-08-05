@@ -1,0 +1,81 @@
+{
+  "configVersion": 1,
+  "timestamp": 1628198722268,
+  "index": "/nxtapp/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/nxtapp/favicon.ico",
+        "/nxtapp/index.html",
+        "/nxtapp/main.1a687f5fe8ca10a9f459.js",
+        "/nxtapp/manifest.webmanifest",
+        "/nxtapp/polyfills.270fb2b0fd98bcbca852.js",
+        "/nxtapp/runtime.e9b36dbb56552d441bfd.js",
+        "/nxtapp/styles.a35ebd45ddcf6eddd71a.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/nxtapp/assets/icons/icon-128x128.png",
+        "/nxtapp/assets/icons/icon-144x144.png",
+        "/nxtapp/assets/icons/icon-152x152.png",
+        "/nxtapp/assets/icons/icon-192x192.png",
+        "/nxtapp/assets/icons/icon-384x384.png",
+        "/nxtapp/assets/icons/icon-512x512.png",
+        "/nxtapp/assets/icons/icon-72x72.png",
+        "/nxtapp/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/nxtapp/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/nxtapp/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/nxtapp/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/nxtapp/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/nxtapp/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/nxtapp/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/nxtapp/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/nxtapp/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/nxtapp/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/nxtapp/index.html": "2c2c4a3b6284e9f8e01a50db172ad7eb28d855c9",
+    "/nxtapp/main.1a687f5fe8ca10a9f459.js": "4e5452ed451f923d53648ce991566123ba75b9dc",
+    "/nxtapp/manifest.webmanifest": "5e55582c2e95d0091b734e98f92407f41d23c926",
+    "/nxtapp/polyfills.270fb2b0fd98bcbca852.js": "0c55635bf9c26939651589f46153180e730831c2",
+    "/nxtapp/runtime.e9b36dbb56552d441bfd.js": "8a16a0e947b4ebb1645dc73c5167007d042cb1d1",
+    "/nxtapp/styles.a35ebd45ddcf6eddd71a.css": "0e95eacd085efe2f4d3bbb716556fc073306122b"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
