@@ -11,5 +11,7 @@ Javascript file will be executed by Javascript engines (chrome, firefox, nodejs)
 This keyword used in function definition. As the name stands for, this keyword tells javascript engine to make the defined function execution asynchronously. Javascript inbuilt functions (setTimeout, fetch) are executed asynchronously nby default without explicit mention. But a user defined function would expect async keyword to make the execution asynchronously.  
 
 ### await
+This keyword used in the async function call. It tells the interpreter to wait for the async functional invocation. 
+
 
 ### promise
