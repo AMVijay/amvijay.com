@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 header {
     background-color: #4169E1;
+    height: 44px;
 }
