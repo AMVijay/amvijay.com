@@ -1,9 +1,0 @@
-{
-    "title": "Angular Architecture - Analysis",
-    "description" : "Deep Dive Analysis about Angular Architecture and how it is implemented",
-	"keywords" : "angular architecture",
-	"lastUpdatedDate" : "21-November-2020",
-	"author" : "Vijayaraaghavan Manoharan",
-	"tags" : ["angular"],
-	"content" : "https://raw.githubusercontent.com/AMVijay/angular-learning/main/architecture.md"
-}
