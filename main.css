@@ -1,23 +1,6 @@
-html,
-body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    text-align: center;
-}
-
 main {
+    text-align: center;
     padding: 6% 20%;
-}
-
-.name {
-    font-size: 5vw;
-    color: #218bfb;
-}
-
-.subtitle {
-    color: #222;
-    font-size: 1.75vw;
-    font-style: italic;
 }
 
 .icons {
