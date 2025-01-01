@@ -1,0 +1,17 @@
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header .name {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+header .menu{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
