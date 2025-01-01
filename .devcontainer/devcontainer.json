@@ -1,0 +1,6 @@
+{
+    "name": "amvijaycom-website",
+    "build": {
+        "dockerfile": "../Dockerfile"
+    }
+}
