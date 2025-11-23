@@ -1,18 +1,27 @@
-main {
+html, body {
+    -moz-animation: fadein 0.5s;
+    -ms-animation: fadein 0.5s;
+    -o-animation: fadein 0.5s;
+    -webkit-animation: fadein 0.5s;
+    -webkit-touch-callout: none;
+    animation: fadein 0.5s;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-display: swap;
+    height: 100%;
+    margin: 0;
+    min-height: 100%;
+    padding: 0;
     text-align: center;
-    padding: 6% 20%;
 }
 
-.icons {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+::selection {
+    background: #eee;
 }
 
-.icons>div {
-    margin-top: 8%;
-    width: 12.5%;
+::-moz-selection {
+    background: #eee;
 }
 
 a {
@@ -20,30 +29,178 @@ a {
     text-decoration: none;
 }
 
+h1 {
+    text-transform: uppercase;
+}
+
+.svg-fill path {
+    fill: #333;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes shake {
+    0% { transform:rotate(4deg); }
+    50% { transform:rotate(-4deg); }
+    100% { transform:rotate(4deg); }
+}
+
+@-moz-keyframes shake {
+    0% { -moz-transform:rotate(4deg); }
+    50% { -moz-transform:rotate(-4deg); }
+    100% { -moz-transform:rotate(4deg); }
+}
+
+@-ms-keyframes shake {
+    0% { -ms-transform:rotate(4deg); }
+    50% { -ms-transform:rotate(-4deg); }
+    100% { -ms-transform:rotate(4deg); }
+}
+
+@-o-keyframes shake {
+    0% { -o-transform:rotate(4deg); }
+    50% { -o-transform:rotate(-4deg); }
+    100% { -o-transform:rotate(4deg); }
+}
+
+@-webkit-keyframes shake {
+    0% { -webkit-transform:rotate(4deg); }
+    50% { -webkit-transform:rotate(-4deg); }
+    100% { -webkit-transform:rotate(4deg); }
+}
+
+svg:hover {
+    -moz-animation: shake 0.5s infinite;
+    -ms-animation: shake 0.5s infinite;
+    -o-animation: shake 0.5s infinite;
+    -webkit-animation: shake 0.5s infinite;
+    animation: shake 0.5s infinite;
+}
+
+.main {
+    padding: 6% 20%;
+}
+
+.name {
+    color: rgb(13, 110, 253);
+    font-size: 5.5vw;
+    margin: 0;
+}
+
+.subtitle {
+    color: #222;
+    font-size: 1.75vw;
+    font-style: italic;
+    margin-bottom: 6%;
+    margin-top: 2%;
+    font-weight: 300;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .icons svg {
     width: 50%;
 }
 
-/* main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-
-
-.columnLayout {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.icons > div {
+    margin-top: 8%;
+    width: 12.5%;
 }
 
-.rowLayout {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5vw;
+/* Responsive Design for Tablets */
+@media screen and (max-width: 1024px) {
+    .main {
+        padding: 8% 15%;
+    }
+
+    .name {
+        font-size: 10vw;
+    }
+
+    .subtitle {
+        font-size: 2.2vw;
+    }
+
+    .icons > div {
+        width: 16.67%;
+    }
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    .main {
+        padding: 12% 10%;
+    }
+
+    .name {
+        font-size: 7vw;
+    }
+
+    .subtitle {
+        font-size: 4vw;
+        margin-bottom: 12%;
+        margin-top: 4%;
+    }
+
+    .icons > div {
+        width: 25%;
+        margin-top: 6%;
+    }
+
+    .icons svg {
+        width: 60%;
+    }
+}
+
+/* Responsive Design for Small Mobile Devices */
+@media screen and (max-width: 480px) {
+    .main {
+        padding: 16% 8%;
+    }
+
+    .name {
+        font-size: 6vw;
+    }
+
+    .subtitle {
+        font-size: 3.5vw;
+        margin-bottom: 16%;
+        margin-top: 6%;
+    }
+
+    .icons > div {
+        width: 33.33%;
+        margin-top: 8%;
+    }
+
+    .icons svg {
+        width: 70%;
+    }
 }
